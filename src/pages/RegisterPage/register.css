@@ -1,0 +1,57 @@
+#pageH2 {
+    color: black;
+    border-bottom: 4px solid #FCF7DD;
+    width: 30%;
+    margin: 30px auto;
+    text-align: center;
+}
+
+#profField input {
+    border: none;
+    background-color: #EEEEEE;
+    border-left: 8px solid #FCF7DD;
+    border-right: 8px solid #FCF7DD;
+    padding: 10px;
+    color: black;
+}
+
+::placeholder {
+    color: gray;
+    
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+#profField {
+    color: white;
+    display: grid;
+    margin-top: 10px;
+    grid-template-columns: 30% 70%;
+    row-gap: 15px;
+    column-gap: 5px;
+    align-items: center;
+    border: none;
+}
+
+#profForm {
+    margin: 0 auto;
+    width: 40%;
+    border: 2px solid #B0916E;
+    border-radius: 10px;
+    background-color: #B0916E;
+    padding: 30px;
+    margin-bottom: 40px;
+}
+
+#btnContinue {
+    margin: 0 auto;
+    margin-top: 30px;
+    border-radius: 20px;
+    border: none;
+    padding: 10px;
+    width: 50%;
+    text-align: center;
+}
+
