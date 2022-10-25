@@ -4,7 +4,7 @@ import { useState } from "react";
 import "./register.css";
 
 
-const baseURL = "http://localhost:8080/api/v1/account";
+const baseURL = process.env.REACT_APP_API_URL + "account";
 
 const RegisterForm = () => {
 

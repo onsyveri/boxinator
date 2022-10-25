@@ -7,7 +7,7 @@ import '../Modal/packagemodal.css';
 import axios from 'axios';
 import emailjs from '@emailjs/browser';
 
-const baseURL = 'http://localhost:8080/api/v1';
+const baseURL = process.env.REACT_APP_API_URL;
 
 const packageConfig = {
   required: true,
@@ -87,7 +87,7 @@ const PackageFormGuest = () => {
   const onSubmit = (data) => {
 
     axios
-      .post(baseURL + '/shipments/guest', {
+      .post(baseURL + 'shipments/guest', {
         email: data.email,
         receiver_name: data.receiver_name,
         weight: data.weight,

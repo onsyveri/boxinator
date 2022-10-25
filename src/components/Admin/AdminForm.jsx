@@ -7,7 +7,7 @@ import { useWeight } from "../../context/WeightContext";
 import {useCountry} from "../../context/CountryContext";
 import { fetchPackage } from "../../api/PackageService";
 
-const baseURL = "http://localhost:8080/api/v1";
+const baseURL = process.env.REACT_APP_API_URL;
 
 const AdminForm = () => {
 
@@ -34,7 +34,7 @@ const AdminForm = () => {
     const onSubmit = event => {
         event.preventDefault();
         
-        axios.post(baseURL + "/shipments", { 
+        axios.post(baseURL + "shipments", { 
             id: event.target[0].id, 
             receiver_name: event.target[1].value, 
             weight: event.target[2].value,

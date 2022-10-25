@@ -6,7 +6,7 @@ import axios from ".";
  */
 export const fetchWeight = async () => {
 
-  const weightURL = "http://localhost:8080/api/v1/weight";
+  const weightURL = process.env.REACT_APP_API_URL + "weight";
 
   try {
     const { data } = await axios.get(weightURL);
@@ -29,7 +29,7 @@ export const fetchWeight = async () => {
  * @returns {Promise<{product: { id, value, packages[] } | null, error: null}>}
  */
 export const fetchWeightById = async (id) => {
-  const weightURL = "http://localhost:8080/api/v1/weight";
+  const weightURL = process.env.REACT_APP_API_URL + "weight";
 
   try {
     const { data, status } = await axios.get(weightURL + "/" + id);

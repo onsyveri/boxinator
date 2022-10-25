@@ -4,7 +4,7 @@ import {fetchUserById } from '../../api/UserService';
 import { useUser } from '../../context/UserContext';
 import keycloak from '../../keycloak';
 
-const baseURL = "http://localhost:8080/api/v1/account/"; // Api connection
+const baseURL = process.env.REACT_APP_API_URL + "account/"; // Api connection
 let userId = "";
 
 const ProfileForm = () => {

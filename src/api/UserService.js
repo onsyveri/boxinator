@@ -7,7 +7,7 @@ import keycloak from "../keycloak";
      */
     export const fetchUser = async () => {
     
-      const accountURL = "http://localhost:8080/api/v1/account";
+      const accountURL = process.env.REACT_APP_API_URL + "account";
     
       try {
         const { data } = await axios.get(accountURL);
@@ -31,7 +31,7 @@ import keycloak from "../keycloak";
      * @returns {Promise<{account: [] | null, error: null}>}
      */
     export const fetchUserById = async (accountId) => {
-      const accountURL = "http://localhost:8080/api/v1/account";
+      const accountURL = process.env.REACT_APP_API_URL + "account";
     
       try {
         const { data } = await axios.get(accountURL + "/" + accountId);
