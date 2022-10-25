@@ -76,6 +76,7 @@ export const fetchPackageById = async (packageId) => {
 
 /**
  * SAMPLE FUNCTION: Fetch packages from a REST API
+ * need to push new version
  * @returns { Promise<{ packages: [], error: null | string }>} response
  */
  export const fetchCancelledPackage = async () => {
