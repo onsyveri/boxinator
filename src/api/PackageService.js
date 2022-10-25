@@ -7,7 +7,7 @@ import keycloak from "../keycloak";
  */
 export const fetchPackage = async () => {
 
-  const shipmentURL = "http://localhost:8080/api/v1/shipments/";
+  const shipmentURL = process.env.REACT_APP_API_URL + "shipments/";
 
   try {
     const { data } = await axios.get(shipmentURL);
@@ -31,7 +31,7 @@ export const fetchPackage = async () => {
  * @returns {Promise<{package: { id, receiver_name, weight, color, date, status, appUser, country, totalSum } | null, error: null}>}
  */
 export const fetchPackageById = async (packageId) => {
-  const shipmentURL = "http://localhost:8080/api/v1/shipments/customer";
+  const shipmentURL = process.env.REACT_APP_API_URL + "shipments/customer";
 
   try {
     const { data, status } = await axios.get(shipmentURL + "/" + packageId);
@@ -56,7 +56,7 @@ export const fetchPackageById = async (packageId) => {
  */
  export const fetchCompletedPackage = async () => {
 
-  const shipmentURL = "http://localhost:8080/api/v1/shipments/complete";
+  const shipmentURL = process.env.REACT_APP_API_URL + "shipments/complete";
 
   try {
     const { data } = await axios.get(shipmentURL);
@@ -80,7 +80,7 @@ export const fetchPackageById = async (packageId) => {
  */
  export const fetchCancelledPackage = async () => {
 
-  const shipmentURL = "http://localhost:8080/api/v1/shipments/cancelled";
+  const shipmentURL = process.env.REACT_APP_API_URL + "shipments/cancelled";
 
   try {
     const { data } = await axios.get(shipmentURL);

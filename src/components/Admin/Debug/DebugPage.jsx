@@ -10,18 +10,15 @@ import { NavLink } from "react-router-dom";
 import {Row} from 'react-bootstrap';
 
 
-const shipmentURL = "http://localhost:8080/api/v1/shipments/status/"
+const shipmentURL = process.env.REACT_APP_API_URL + "shipments/status/";
 
-let userId = ""
-
-
+let userId = "";
 
 const DebugPage = () => {
 
     const {packages, setPackage} = usePackage()
 
     userId = keycloak.subject;
-
 
     useEffect(() => {
       

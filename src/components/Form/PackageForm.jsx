@@ -7,7 +7,7 @@ import '../Modal/packagemodal.css';
 import axios from 'axios';
 import keycloak from '../../keycloak';
 
-const baseURL = 'http://localhost:8080/api/v1';
+const baseURL = process.env.REACT_APP_API_URL;
 let userId = "";
 
 const packageConfig = {
@@ -65,7 +65,7 @@ const PackageForm = () => {
   const onSubmit = (data)=> { //Creates a package
 
     axios
-    .post(baseURL + '/shipments', {
+    .post(baseURL + 'shipments', {
       headers: { Authorization: `Bearer ${keycloak.token}` },
       receiver_name: data.receiver_name,
       weight: data.weight,

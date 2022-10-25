@@ -10,10 +10,9 @@ import PackageModalGuest from "../../components/Modal/PackageModalGuest";
 
 const LoginForm = () => {
 
-  const [isOpen, setIsOpen] = useState(false)
+  console.log("URL:" + process.env.REACT_APP_API_URL);
 
-
-
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>

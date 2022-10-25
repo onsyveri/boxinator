@@ -6,7 +6,7 @@ import axios from ".";
  */
 export const fetchCountry = async () => {
 
-  const countryURL = "http://localhost:8080/api/v1/settings/countries/get";
+  const countryURL = process.env.REACT_APP_API_URL + "settings/countries/get";
 
   try {
     const { data } = await axios.get(countryURL);
@@ -29,7 +29,7 @@ export const fetchCountry = async () => {
  * @returns {Promise<{product: { id, multiplier, packages } | null, error: null}>}
  */
 export const fetchCountryById = async (id) => {
-  const accountURL = "http://localhost:8080/api/v1/account";
+  const accountURL = process.env.REACT_APP_API_URL + "account";
 
   try {
     const { data, status } = await axios.get(accountURL + "/" + id);

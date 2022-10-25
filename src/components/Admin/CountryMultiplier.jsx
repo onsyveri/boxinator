@@ -1,9 +1,8 @@
 import React from 'react';
 import axios from 'axios'; //Axios
 import { useCountry } from "../../context/CountryContext";
-import keycloak from '../../keycloak';
 
-const baseURL = "http://localhost:8080/api/v1/settings/countries";
+const baseURL = process.env.REACT_APP_API_URL + "settings/countries";
 
 const CountryMultiplier = () => {
 
