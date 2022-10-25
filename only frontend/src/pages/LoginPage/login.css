@@ -1,0 +1,80 @@
+body {
+    margin: 0 auto;
+    text-align: center;
+    background-color: wheat;
+  }
+  
+
+
+  .Btn{
+    color: black;
+    margin: 0 auto;
+    background-color: #FCF7DD;
+    border: 4px solid #B0916E;
+    border-radius: 20px;
+    padding: 10px;
+    width: 100%;
+  }
+
+  .Btn:hover {
+    background-color: #B0916E;
+    border: 4px solid #FCF7DD;
+    color: white;
+  }
+  
+  #allCard{
+    margin: 15px;
+    height: 200px;
+    border-radius: 20px;
+    background-color: #EEEEEE;
+    color: black;
+  }
+  
+ .groubcard{
+  margin-top: 150px;
+  margin-bottom: 150px;
+ }
+
+ .card-footer {
+  --bs-card-cap-bg: none;
+ }
+  
+
+ 
+  
+  /*
+       
+  .container.login{
+    margin: 0 auto;
+    
+  }
+  
+  h1 {
+    margin: 0 auto;
+  }
+  
+  
+  .form-control{
+      text-align: center;
+      width: 300px;
+  }
+  
+  
+  .imageLogo{
+      width: 100px;
+      height: 100px;
+      margin-left: 80px;
+  }
+  .btn.guest{
+  margin-top: 50px;
+  margin-right: 100px;
+  
+  }
+  
+  .btn.register{
+   margin-top: 50px;
+  }
+  
+  
+  
+     */
