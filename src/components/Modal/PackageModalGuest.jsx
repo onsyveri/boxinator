@@ -23,9 +23,6 @@ return (
  
 
     </Modal.Body>
-    <Modal.Footer>
-       <Cart/>
-    </Modal.Footer>
 
   </Modal>
     
