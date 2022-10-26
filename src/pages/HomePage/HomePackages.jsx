@@ -30,11 +30,12 @@ const HomePackages = () => {
         
     }, [packages, setPackage]);
 
-    if (!packages) return null;
-
     if(stop === 0) {
         window.location = "/home";
     }
+
+    if (!packages) return null;
+
 
     return (
         <div id="packGrid">
