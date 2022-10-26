@@ -36,7 +36,7 @@ const AdminForm = () => {
 
         console.log("Test: " + event.target[1].name);
 
-        if (event.target[1].name === undefined) {
+        if (event.target[1].name === "") {
 
             axios.post(baseURL + "shipments/guest", { 
                 id: event.target[0].id, 
