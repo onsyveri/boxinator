@@ -34,6 +34,8 @@ const AdminForm = () => {
     const onSubmit = event => {
         event.preventDefault();
 
+        console.log("Test: " + event.target[1].name);
+
         if (event.target[1].name === undefined) {
 
             axios.post(baseURL + "shipments/guest", { 
