@@ -7,7 +7,6 @@ import { fetchPackageById } from '../../api/PackageService';
 import keycloak from '../../keycloak';
 
 let userId = "";
-let stop = 0;
 
 const HomePackages = () => {
 
@@ -22,17 +21,12 @@ const HomePackages = () => {
             const init = async () => {
                 const box = await fetchPackageById(userId);
                 setPackage(box);
-                stop = 1
             };
 
             init();
         }
         
-    }, [packages, setPackage]);
-
-    if(stop === 0) {
-        window.location = "/home";
-    }
+    }, [packages]);
 
     if (!packages) return null;
 
