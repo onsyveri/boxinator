@@ -27,11 +27,10 @@ const LoginForm = () => {
             {!keycloak.authenticated && (
               <Button
                 className="Btn"
-                onClick={() => keycloak.login()}>
+                onClick={() => keycloak.login({redirectUri: process.env.REACT_APP_URL + "home"})}>
                 Login
               </Button>
             )}
-            {keycloak.authenticated ? window.location.assign("/home") : null}
           </Card.Footer>
         </Card>
         {/* ---------------------REGISTER CARD -------------------------------------*/}
@@ -45,11 +44,10 @@ const LoginForm = () => {
             {!keycloak.authenticated && (
               <Button
                 className="Btn"
-                onClick={() => keycloak.register()}>
+                onClick={() => keycloak.register({redirectUri: process.env.REACT_APP_URL + "register"})}>
                 Register
               </Button>
             )}
-            {keycloak.authenticated ? window.location.assign("/register") : null}
           </Card.Footer>
         </Card>
         {/**-----------------------------GUEST CARD-------------------------------- */}

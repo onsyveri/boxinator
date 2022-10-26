@@ -80,7 +80,7 @@ const PackageFormGuest = () => {
           console.log(error.text);
         }
       );
-    e.target.reset();
+   // e.target.reset();
   };
 
 
@@ -120,7 +120,7 @@ const PackageFormGuest = () => {
  <div>
 
        {/* Sender's email*/}
-       <form ref={form} onSubmit={sendEmail}>
+       <form ref={form} onSubmit={handleSubmit(sendEmail)}>
           <Form.Group
             id="form-group"
             className="mb-3"
@@ -171,7 +171,7 @@ const PackageFormGuest = () => {
           name="weight"
           {...register("weight", packageConfig)} 
           onChange={handleWeightChange}>
-         
+         <option>Select weight</option>
           {weights && weights.map((weight) => (
             <option key={weight.id} value={weight.id}>{weight.id}</option>
           ))}
@@ -184,7 +184,7 @@ const PackageFormGuest = () => {
           <Form.Select name="country" 
          { ... register("country", packageConfig)}
          onChange={handleCountryChange}>
-          <option></option> 
+          <option>Select country</option> 
            {countries && countries.map((country)  => ( 
             <option key={country.id} value={country.id} >{country.id}</option>
             
@@ -194,9 +194,9 @@ const PackageFormGuest = () => {
         <FormGroup>
           <p name="sum">kr. {sum},00 </p>
         </FormGroup>
-          <Button type="submit" onClick={sendEmail}>Send package</Button>
-        
-      </Form>
+          <Button type="submit" >Send package</Button>
+        {/* onClick={sendEmail} */}
+      </Form >
  
  </div>
  )
