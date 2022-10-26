@@ -20,6 +20,7 @@ const HomePackages = () => {
             const init = async () => {
                 const box = await fetchPackageById(userId);
                 setPackage(box);
+                window.location = "/home";
             };
 
             init();
