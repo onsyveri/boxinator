@@ -101,7 +101,7 @@ const PackageForm = () => {
         <Form.Control
           type="text"
           name="receiver_name"
-          placeholder="first name..."
+          placeholder="First name..."
           {...register("receiver_name", packageConfig)}
         />
       </Form.Group>

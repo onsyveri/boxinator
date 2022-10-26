@@ -12,7 +12,7 @@ const HomePage = () => {
 console.log(keycloak.idTokenParsed.roles);
 
 const [isOpen, setIsOpen] = useState(false)
-
+    console.log(keycloak.idTokenParsed.roles[1]);
     return(
         <div id="homeBody">
 
@@ -23,14 +23,17 @@ const [isOpen, setIsOpen] = useState(false)
                 </>
             }
 
-            <h1 id="homeH1">Your Packages</h1>
+           
             <div id="center">
                 <button id="btnHome" type="button" className="btn btn-info" onClick={() => setIsOpen(true)}>New Package</button>
             </div>
             {isOpen && <PackageModal setIsOpen={setIsOpen} />}
 
-            {keycloak.idTokenParsed.roles[1] === "user" &&
-                <HomePackages />
+            {keycloak.idTokenParsed.roles[1] === "user" && keycloak.idTokenParsed.roles[0] !== "admin" &&
+                <> 
+                    <h1 id="homeH1">Your Packages</h1>
+                    <HomePackages />
+                </>
             }
             
             {keycloak.idTokenParsed.roles[0] === "admin" &&
