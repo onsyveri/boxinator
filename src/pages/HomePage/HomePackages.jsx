@@ -16,15 +16,16 @@ const HomePackages = () => {
     const { packages, setPackage } = usePackage();
 
     useEffect(() => {
-      
-        const init = async () => {
-            const box = await fetchPackageById(userId);
-            setPackage(box);
-        };
+        if(!packages) {
+            const init = async () => {
+                const box = await fetchPackageById(userId);
+                setPackage(box);
+            };
 
-        init();
+            init();
+        }
         
-    }, []);
+    }, [packages, setPackage]);
 
     if (!packages) return null;
 
