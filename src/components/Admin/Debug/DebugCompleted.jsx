@@ -12,14 +12,16 @@ const DebugCompleted = () => {
    // GET all completed packages
    useEffect(() => {
 
-    const init = async () => {
-        const packages = await fetchCompletedPackage();
-        setPackage(packages);
-    };
+    if (!packages) {
+      const init = async () => {
+          const packages = await fetchCompletedPackage();
+          setPackage(packages);
+      };
 
-    init();
+      init();
+    }
     
-}, []);
+}, [packages]);
 
 if (!packages) return null;
 
