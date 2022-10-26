@@ -56,7 +56,7 @@ export const fetchPackageById = async (packageId) => {
  */
  export const fetchCompletedPackage = async () => {
 
-  const shipmentURL = process.env.REACT_APP_API_URL + "shipments/complete";
+  const shipmentURL = process.env.REACT_APP_API_URL + "shipments/completed";
 
   try {
     const { data } = await axios.get(shipmentURL);
