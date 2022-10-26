@@ -5,7 +5,7 @@
 
 
 .footerStyle{
-    position:fixed;
+    position:absolute;
     margin-top: 200px;
    bottom: 0;
    width: 100%;

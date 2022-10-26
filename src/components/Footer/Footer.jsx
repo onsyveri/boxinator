@@ -50,7 +50,7 @@ const Footer = () => {
           style={{ backgroundColor: "rgba(0, 0, 0, 0.05)" }}
         >
           © 2022 Copyright: 
-          <a className="text-reset fw-bold" href="https://mdbootstrap.com/">
+          <a className="text-reset fw-bold" href="https://boxinatorfrontendtest.herokuapp.com/">
             BoxinatorGroup-Noroff
           </a>
         </div>
