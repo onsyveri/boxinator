@@ -7,6 +7,7 @@ import { fetchPackageById } from '../../api/PackageService';
 import keycloak from '../../keycloak';
 
 let userId = "";
+let stop = 0;
 
 const HomePackages = () => {
 
@@ -15,11 +16,13 @@ const HomePackages = () => {
     // Axios ------------------------------
     const { packages, setPackage } = usePackage();
 
+
     useEffect(() => {
         if(!packages) {
             const init = async () => {
                 const box = await fetchPackageById(userId);
                 setPackage(box);
+                stop = 1
             };
 
             init();
@@ -28,6 +31,10 @@ const HomePackages = () => {
     }, [packages, setPackage]);
 
     if (!packages) return null;
+
+    if(stop === 0) {
+        window.location = "/home";
+    }
 
     return (
         <div id="packGrid">

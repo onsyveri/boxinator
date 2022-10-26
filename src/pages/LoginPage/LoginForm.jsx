@@ -27,7 +27,7 @@ const LoginForm = () => {
             {!keycloak.authenticated && (
               <Button
                 className="Btn"
-                onClick={() => keycloak.login(window.location = "/home")}>
+                onClick={() => keycloak.login({redirectUri: process.env.REACT_APP_URL + "home"})}>
                 Login
               </Button>
             )}
