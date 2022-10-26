@@ -126,7 +126,7 @@ const PackageForm = () => {
           {...register("weight", packageConfig)} 
           onChange={handleWeightChange}>
 
-          <option></option>
+          <option>Select Weight</option>
           {weights && weights.map((weight) => (
             <option key={weight.id} value={weight.id}>{weight.id}</option>
           ))}
@@ -140,7 +140,7 @@ const PackageForm = () => {
           name="country"
           { ... register("country", packageConfig)}
           onChange={handleCountryChange}>
-          <option></option> 
+          <option>Select Country</option> 
            {countries && countries.map((country)  => ( 
             <option key={country.id} value={country.id} >{country.id}</option>
             

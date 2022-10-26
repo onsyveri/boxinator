@@ -24,7 +24,7 @@ const Footer = () => {
                 <p>
                   <img
                     className="logoImage"
-                    src="./images/logo2.png"
+                    src="https://png.pngtree.com/png-clipart/20210311/original/pngtree-mystery-box-png-image_5986608.jpg"
                     alt="box_image"
                   />
                 </p>

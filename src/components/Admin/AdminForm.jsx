@@ -33,22 +33,43 @@ const AdminForm = () => {
     //POST changes made by admin
     const onSubmit = event => {
         event.preventDefault();
+
+        if (event.target[1].name === null) {
+
+            axios.post(baseURL + "shipments/guest", { 
+                id: event.target[0].id, 
+                receiver_name: event.target[1].value, 
+                weight: event.target[2].value,
+                color: event.target[3].value,
+                country: event.target[4].value,
+                status: event.target[5].value,
+                totalSum: event.target[6].value
+            })
+            .then(res=>{
+                console.log(res);
+                console.log(res.data);
+                window.location = "/home" //This line of code will redirect you once the submission is succeed
+            })
+
+        }
         
-        axios.post(baseURL + "shipments", { 
-            id: event.target[0].id, 
-            receiver_name: event.target[1].value, 
-            weight: event.target[2].value,
-            color: event.target[3].value,
-            country: event.target[4].value,
-            appUser: event.target[1].name,
-            status: event.target[5].value,
-            totalSum: event.target[6].value
-        })
-        .then(res=>{
-            console.log(res);
-            console.log(res.data);
-            window.location = "/home" //This line of code will redirect you once the submission is succeed
-        })
+        else {       
+            axios.post(baseURL + "shipments", { 
+                id: event.target[0].id, 
+                receiver_name: event.target[1].value, 
+                weight: event.target[2].value,
+                color: event.target[3].value,
+                country: event.target[4].value,
+                appUser: event.target[1].name,
+                status: event.target[5].value,
+                totalSum: event.target[6].value
+            })
+            .then(res=>{
+                console.log(res);
+                console.log(res.data);
+                window.location = "/home" //This line of code will redirect you once the submission is succeed
+            })
+        }
     };
 
     return (
