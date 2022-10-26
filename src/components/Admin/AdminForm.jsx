@@ -34,7 +34,7 @@ const AdminForm = () => {
     const onSubmit = event => {
         event.preventDefault();
 
-        if (event.target[1].name === null) {
+        if (event.target[1].name === undefined) {
 
             axios.post(baseURL + "shipments/guest", { 
                 id: event.target[0].id, 
