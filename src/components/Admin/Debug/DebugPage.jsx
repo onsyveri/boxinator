@@ -55,8 +55,6 @@ const DebugPage = () => {
     return (
 <div><h1>View all packages</h1>
 <div  id="packGrid"> <li id="liProf"><NavLink to="/debug/completed">COMPLETED</NavLink></li>
-<li id="liProf"><NavLink to="/debug/cancelled">CANCELLED</NavLink></li> 
-<li id="liProf"><NavLink to="/debug/cancelled">CANCELLED</NavLink></li>
 </div>
 
             <div id="packGrid">
