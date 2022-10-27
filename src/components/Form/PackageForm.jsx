@@ -83,13 +83,14 @@ const PackageForm = () => {
       } else {
         setResStatus("error");
       }
+      reset()
+      window.location = "/home"
+      console.log(resStatus);
     })
     .catch(function (error) {
       console.log(error);
     });
-    reset()
-    window.location = "/home"
-    console.log(resStatus);
+   
 
   }
 
