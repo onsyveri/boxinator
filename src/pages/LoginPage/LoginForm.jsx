@@ -50,24 +50,8 @@ const LoginForm = () => {
             )}
           </Card.Footer>
         </Card>
-        {/**-----------------------------GUEST CARD-------------------------------- */}
-        <Card id="allCard">
-          <Card.Body>
-            <Card.Text>
-              Do you want to add a package without registering? Use the Guest
-              button.
-            </Card.Text>
-          </Card.Body>
-          <Card.Footer>
-            <Button
-              className="Btn"
-              onClick={() => setIsOpen(true)}>
-              Guest
-            </Button>
-          </Card.Footer>
-        </Card>
       </CardGroup>
-      {isOpen && <PackageModalGuest setIsOpen={setIsOpen} />}
+     
     </>
   );
 };

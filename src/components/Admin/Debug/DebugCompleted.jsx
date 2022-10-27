@@ -3,10 +3,11 @@ import { usePackage } from "./../../../context/PackageContext"
 import { fetchCompletedPackage } from '../../../api/PackageService';
 import { Col, Container,Row } from 'react-bootstrap';
 import './debugCompleted.css'
+import { useState } from 'react';
 
 const DebugCompleted = () => {
 
-  const { packages, setPackage } = usePackage();
+  const [ packages, setPackage ] = useState(null);
 
 
    // GET all completed packages
