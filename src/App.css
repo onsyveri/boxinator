@@ -12,9 +12,5 @@ body {
     min-height: calc(100vh-100px);
     margin-bottom: -100px;
     background-color: #765d41;
-  
-}
-
-#root {
-    height: 100%;
+    height: auto;
 }
