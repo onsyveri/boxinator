@@ -1,7 +1,7 @@
 import './homepage.css'
 import { ntc } from "../../utils/ntc" // Used to convert hex and rgb to a color name
 import source from "../../stamp-svgrepo-com.svg";
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { usePackage } from '../../context/PackageContext';
 import { fetchPackageById } from '../../api/PackageService';
 import keycloak from '../../keycloak';
@@ -13,20 +13,18 @@ const HomePackages = () => {
     userId = keycloak.subject;
 
     // Axios ------------------------------
-    const { packages, setPackage } = usePackage();
-
+    const [ packages, setPackages ] = useState(null);
 
     useEffect(() => {
-        if(!packages) {
+
             const init = async () => {
                 const box = await fetchPackageById(userId);
-                setPackage(box);
+                setPackages(box);
             };
 
             init();
-        }
         
-    }, [packages]);
+    }, [setPackages]);
 
     if (!packages) return null;
 
