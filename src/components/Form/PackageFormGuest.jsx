@@ -173,7 +173,7 @@ const PackageFormGuest = () => {
           onChange={handleWeightChange}>
          <option>Select weight</option>
           {weights && weights.map((weight) => (
-            <option key={weight.id} value={weight.id}>{weight.id}</option>
+            <option key={weight.id} value={weight.id}>{weight.id + "  "} {weight.value +  " KG"} </option>
           ))}
           </Form.Select> 
         </Form.Group>
