@@ -1,6 +1,6 @@
 
 .logoImage{
-    width: 100px;
+    width: 101px;
 
 }
 
@@ -16,7 +16,7 @@
 #navBar {
     margin: 0;
     margin-bottom: 20px;
-    background-color: #a0522d;
+    background-color:#A7845D;
     display: flex;
  
     align-items: center;

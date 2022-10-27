@@ -8,7 +8,7 @@ import Register from "./views/Register";
 import HomePage from "./views/HomePage";
 import Login from "./views/Login";
 import Profile from "./views/Profile";
-//import Footer from "./components/Footer/Footer";
+import Footer from "./components/Footer/Footer";
 import DebugPage from "./components/Admin/Debug/DebugPage";
 import DebugCompleted from "./components/Admin/Debug/DebugCompleted"
 
@@ -54,6 +54,8 @@ function App() {
         </main>
 
       </BrowserRouter>
+
+      <Footer />
      
 
     </>

@@ -1,5 +1,15 @@
+
+html {
+    height: 100%;
+}
+
+
 body {
-    margin: 0 auto;
+    margin: 0 ;
     text-align: center;
     background-color: wheat;
+    display:flex;
+    flex-direction: column;
+    min-height: calc(100vh-100px);
+    margin-bottom: -100px;
 }
