@@ -37,7 +37,7 @@ function App() {
 
       <BrowserRouter>
         <Navbar />
-        <main className="container">
+        <main>
           <Routes>
             <Route path="/" element={<Login />} />
             <Route path="/register" element={<Register />} />
@@ -47,7 +47,6 @@ function App() {
             <Route path="/profile" element={<Profile />} />
             <Route path="/debug" element={<DebugPage />} />
             <Route path="/debug/completed" element={<DebugCompleted />} />
-
 
           </Routes>
 

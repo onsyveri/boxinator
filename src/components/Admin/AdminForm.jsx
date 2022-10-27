@@ -121,7 +121,7 @@ const AdminForm = () => {
                             </li>
 
                             <li>
-                                <input type="text" id="pName" name={packages.totalSum} placeholder="kr. 00,00" defaultValue={packages.totalSum} disabled/>
+                                <input type="text" id="pSum" name={packages.totalSum} placeholder="kr. 00,00" defaultValue={packages.totalSum} disabled/>
                             </li>
 
                             <li>

@@ -110,7 +110,7 @@ const PackageForm = () => {
       <Form.Group id="form-group" className="mb-3" controlId="exampleForm.ControlInput1">
         <Form.Label>Box color</Form.Label>
         <Form.Control
-          //id="button-color-box"
+          id="button-color-box"
 
           type="color"
           name="color"
@@ -150,7 +150,7 @@ const PackageForm = () => {
         <FormGroup>
           <p name="sum">kr. {sum},00 </p>
         </FormGroup>
-          <Button type="submit" >Send package</Button>
+          <Button id="btnSend" type="submit" >Send package</Button>
       </Form>
 
   </div>
