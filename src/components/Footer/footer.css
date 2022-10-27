@@ -1,11 +1,25 @@
 .text-center{
     
-    background-color: #f2e9e4;
+    background-color:  #FCF7DD; 
 }
 
 
 .footerStyle{
-    position:relative;
-    bottom: 0;
-    width: 100%;
+   margin-top: auto;
+  
+   bottom: 0;
+   width: 100%;
+   
+ 
+
+}
+
+.text-uppercase{
+    margin-top: 20px;
+
+}
+
+.backgr-foot {
+    background-color: #A7845D;
+    color: #f2e9e4;
 }

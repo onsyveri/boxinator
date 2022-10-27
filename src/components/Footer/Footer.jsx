@@ -16,17 +16,14 @@ const Footer = () => {
         <section className="title">
           <MDBContainer className="text-center text-md-start mt-5">
             <MDBRow className="mt-3">
-              <MDBCol md="3" lg="4" xl="3" className="mx-auto mb-4">
+              <MDBCol md="3" lg="4" xl="3" className="mx-auto">
                 <h6 className="text-uppercase fw-bold mb-4">
-                  <MDBIcon icon="gem" className=" me-3" />
+                  <MDBIcon icon="gem" className=" me-1" />
                   Boxinator
                 </h6>
                 <p>
-                  <img
-                    className="logoImage"
-                    src="https://png.pngtree.com/png-clipart/20210311/original/pngtree-mystery-box-png-image_5986608.jpg"
-                    alt="box_image"
-                  />
+                 Boxinator is a web application for sending out mystery boxes to friends around the world 
+
                 </p>
               </MDBCol>
 
@@ -44,7 +41,7 @@ const Footer = () => {
             </MDBRow>
           </MDBContainer>
         </section>
-
+        <div className="backgr-foot">
         <div
           className="text-center p-4"
           style={{ backgroundColor: "rgba(0, 0, 0, 0.05)" }}
@@ -53,6 +50,7 @@ const Footer = () => {
           <a className="text-reset fw-bold" href="https://boxinatorfrontendtest.herokuapp.com/">
             BoxinatorGroup-Noroff
           </a>
+        </div>
         </div>
       </MDBFooter>
     </div>

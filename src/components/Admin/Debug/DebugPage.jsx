@@ -9,6 +9,8 @@ import keycloak from '../../../keycloak';
 import { NavLink } from "react-router-dom";
 import {Row} from 'react-bootstrap';
 
+import './debugPage.css';
+
 
 const shipmentURL = process.env.REACT_APP_API_URL + "shipments/status/";
 
@@ -52,9 +54,18 @@ const DebugPage = () => {
       })  
     };
 
+    const handelCompleted = () => {
+      window.location='/debug/completed'
+    }
+
+
+
+
     return (
-<div><h1>View all packages</h1>
-<div  id="packGrid"> <li id="liProf"><NavLink to="/debug/completed">COMPLETED</NavLink></li>
+<div><h1 id='viewAllPack'>View all packages</h1>
+<div  > 
+  <button id='comp_package' onClick={handelCompleted}>COMPLETED</button>
+ 
 </div>
 
             <div id="packGrid">

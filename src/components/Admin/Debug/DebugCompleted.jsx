@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { usePackage } from "./../../../context/PackageContext"
 import { fetchCompletedPackage } from '../../../api/PackageService';
 import { Col, Container,Row } from 'react-bootstrap';
-
+import './debugCompleted.css'
 
 const DebugCompleted = () => {
 
@@ -26,20 +26,20 @@ if (!packages) return null;
 
   return (
     <div>
-      <h1>All the completed packages</h1>
+      <h1 id='allPackTitle'>All the completed packages</h1>
 
     <Container>
 
     {packages.shipments && packages.shipments.map(({
         id, receiver_name, color, weight, country, date, totalSum, status}) => (
           <Row  key={id} className="justify-content-md-center"> 
-          <Col>02.03.2022</Col>  
-           <Col>{receiver_name}</Col>
-           <Col>{weight}</Col>
-           <Col>{color}</Col>
-           <Col>{country}</Col>
-           <Col>{totalSum}</Col> 
-           <Col>{status}</Col> 
+         
+           <Col id='text-t'>{receiver_name}</Col>
+           <Col id='text-t'>{weight}</Col>
+           <Col id='text-t'>{color}</Col>
+           <Col id='text-t'>{country}</Col>
+           <Col id='text-t'>{totalSum}</Col> 
+           <Col id='text-t'>{status}</Col> 
           </Row>
       ))}
     
