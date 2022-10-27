@@ -7,21 +7,16 @@
 #navH1 {
     margin: 0; 
     color: white;
-  
+    margin-left: 20px;
 }
-
-
 
 
 #navBar {
     margin: 0;
     margin-bottom: 20px;
-    background-color:#A7845D;
+    background-color: #a7845d;
     display: flex;
- 
     align-items: center;
- 
-    border-bottom: 8px solid #FCF7DD;
 }
 
 #navUl {

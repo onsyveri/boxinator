@@ -49,9 +49,28 @@ const ProfileForm = () => {
 
     return (
         <form id="profForm" onSubmit={onSubmit}>
-
+          
+            
             <fieldset id="profField">
+            {keycloak.tokenParsed && (
+          <>
+            <label htmlFor="fName">First name: </label>
 
+            <p>{keycloak.tokenParsed.given_name}</p>
+
+            <label htmlFor="lName">Last name: </label>
+
+            <p>{keycloak.tokenParsed.family_name}</p>
+
+            <label htmlFor="email">E-mail: </label>
+
+            <p>{keycloak.tokenParsed.email}</p>
+
+            {/*   <p>token is:{keycloak.token}</p>   */}
+
+          </>
+
+        )}
                 <label htmlFor="dateBirth">Date of birth: </label>
                 <input id="dateBirth" type="date" 
                     defaultValue={user.account.birthday}

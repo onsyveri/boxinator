@@ -65,7 +65,7 @@ const PackageForm = () => {
   const onSubmit = (data)=> { //Creates a package
 
     axios
-    .post(baseURL + 'shipments', {
+    .post(baseURL + 'shipments/', {
       headers: { Authorization: `Bearer ${keycloak.token}` },
       receiver_name: data.receiver_name,
       weight: data.weight,
@@ -110,7 +110,7 @@ const PackageForm = () => {
       <Form.Group id="form-group" className="mb-3" controlId="exampleForm.ControlInput1">
         <Form.Label>Box color</Form.Label>
         <Form.Control
-          //id="button-color-box"
+          id="button-color-box"
 
           type="color"
           name="color"
@@ -128,7 +128,7 @@ const PackageForm = () => {
 
           <option>Select Weight</option>
           {weights && weights.map((weight) => (
-            <option key={weight.id} value={weight.id}>{weight.id}</option>
+            <option key={weight.id} value={weight.id}>{weight.id + "  "} {weight.value +  " KG"} </option>
           ))}
           </Form.Select> 
         </Form.Group>
@@ -150,7 +150,7 @@ const PackageForm = () => {
         <FormGroup>
           <p name="sum">kr. {sum},00 </p>
         </FormGroup>
-          <Button type="submit" >Send package</Button>
+          <Button id="btnSend" type="submit" >Send package</Button>
       </Form>
 
   </div>
