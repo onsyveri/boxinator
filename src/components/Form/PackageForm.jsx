@@ -65,7 +65,7 @@ const PackageForm = () => {
   const onSubmit = (data)=> { //Creates a package
 
     axios
-    .post(baseURL + 'shipments', {
+    .post(baseURL + 'shipments/', {
       headers: { Authorization: `Bearer ${keycloak.token}` },
       receiver_name: data.receiver_name,
       weight: data.weight,
@@ -128,7 +128,7 @@ const PackageForm = () => {
 
           <option>Select Weight</option>
           {weights && weights.map((weight) => (
-            <option key={weight.id} value={weight.id}>{weight.id}</option>
+            <option key={weight.id} value={weight.id}>{weight.id + "  "} {weight.value +  " KG"} </option>
           ))}
           </Form.Select> 
         </Form.Group>
