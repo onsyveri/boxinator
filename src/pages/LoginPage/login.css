@@ -11,9 +11,9 @@ body {
     margin: 0 auto;
     background-color: #FCF7DD;
     border: 4px solid #B0916E;
-    border-radius: 20px;
+    border-radius: 10px;
     padding: 10px;
-    width: 100%;
+    width: 70%;
   }
 
   .Btn:hover {
@@ -25,7 +25,7 @@ body {
   #allCard{
     margin: 15px;
     height: 200px;
-    border-radius: 20px;
+    border-radius: 10px;
     background-color: #EEEEEE;
     color: black;
   }

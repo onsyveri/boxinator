@@ -15,7 +15,6 @@ const Navbar = () => {
     return (
         <nav id="navBar">
           
-            <img className= "logoImage" src='https://png.pngtree.com/png-clipart/20210311/original/pngtree-mystery-box-png-image_5986608.jpg' alt='box_image'/>
             <h3 id="navH1" >Boxinator</h3>
             <ul id="navUl" className="d-flex ms-auto order-5">
                
