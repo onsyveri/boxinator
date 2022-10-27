@@ -62,7 +62,7 @@ const DebugPage = () => {
 
 
     return (
-<div><h1>View all packages</h1>
+<div><h1 id='viewAllPack'>View all packages</h1>
 <div  > 
   <button id='comp_package' onClick={handelCompleted}>COMPLETED</button>
  
